@@ -42,10 +42,8 @@ function App() {
       });
   };
   return (
-    <div><stripe-buy-button
-    buy-button-id="buy_btn_1MoPwmSBqeTFR9qw1xH9Xk5l"
-    // publishable-key="pk_live_51MnxckSBqeTFR9qwv9o43C1pQZstuPCGNeG1IUTndtSIMWg19LvKtXlRY691PNl6cG0mgEzAx5sOvea1XmRQB0Hz00Bh6AI9Cl"
-      // <StripeCheckout
+    <div>
+      <StripeCheckout
         name={product.name}
         amount={product.price }
         currency="INR"
@@ -54,11 +52,8 @@ function App() {
         // stripeKey="pk_live_51MnxckSBqeTFR9qwv9o43C1pQZstuPCGNeG1IUTndtSIMWg19LvKtXlRY691PNl6cG0mgEzAx5sOvea1XmRQB0Hz00Bh6AI9Cl"
       >
         <button>Pay to {product.price / 100}</button>
-  {/* > */}
-  </stripe-buy-button>
-      {/* </StripeCheckout> */}
+      </StripeCheckout>
     </div>
-    
   );
 }
 
